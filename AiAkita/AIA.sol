@@ -1,13 +1,21 @@
 // SPDX-License-Identifier: MIT
+
+// ░█████╗░  ██╗  ░█████╗░
+// ██╔══██╗  ██║  ██╔══██╗
+// ███████║  ██║  ███████║
+// ██╔══██║  ██║  ██╔══██║
+// ██║░░██║  ██║  ██║░░██║
+// ╚═╝░░╚═╝  ╚═╝  ╚═╝░░╚═╝
+
 pragma solidity ^0.8.0;
 
 import "./ERC20.sol";
 import "./Ownable.sol";
 
 contract AiAkita is ERC20, Ownable {
-    uint256 private constant MAX_SUPPLY = 314159265358979323 * (10**18); // 314,159,265,358,979,323 AIA
-    uint256 private constant TRANSACTION_FEE_PERCENT = 4; // 4%
-    uint256 private constant BURN_PERCENT = 2; // 50% of transaction fee
+    uint256 private constant MAX_SUPPLY = 314159265358979323 * (10**6); // 314,159,265,358,979,323 AIA
+    uint256 private constant TRANSACTION_FEE_PERCENT = 5; // 5%
+    uint256 private constant BURN_PERCENT = 40; // 40% of transaction fee
     address private teamWalletAdr;
 
     constructor(address _teamWalletAdr) ERC20("AiAkita", "AiA") {
